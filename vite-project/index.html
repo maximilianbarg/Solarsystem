@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="summary_style.css">
+  <link rel="stylesheet" href="checkbox_style.css">
+  <link rel="stylesheet" href="textInput_style.css">
+  <link rel="stylesheet" href="button_style.css">
+  <link rel="stylesheet" href="scrollbar.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solarsystem</title>
+  </head>
+  <body>
+    <canvas id="bg" style=" z-index:1;"></canvas>
+    <details id="one">
+      <summary>Options</summary>
+      <div id="bigone">
+      <details>
+        <summary id="innerDetails">Extras</summary>
+        <ul>
+        <!-- 	Checkbox 1	 -->
+        <li>
+          <label class="toggle" for="stars">
+            <input type="checkbox" class="toggle__input" name="stars" value="starsOn" id="stars" />
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            Stars
+          </label>
+        </li>
+
+        <!-- 	Checkbox 2	 -->
+        <li>
+          <label class="toggle" for="background">
+            <input type="checkbox" class="toggle__input" name="background" value="backgroundOn" id="background" />
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            Background
+          </label>
+        </li>
+
+        <!-- 	Checkbox 3	 -->
+        <li>
+          <label class="toggle" for="axis">
+            <input type="checkbox" class="toggle__input" name="axis" value="backgroundOn" id="axis" />
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            Show axis of planets
+          </label>
+        </li>
+
+        <!-- 	Text Input 1	 -->
+        <li>
+          <div style="margin-top: 20px">
+            <input required="" type='text' name="scale">
+            <label alt='scale' placeholder='scale'></label>
+          </div>
+        </li>
+
+        <!-- 	Text Input 2	 -->
+        <li>
+          <div style="margin-top: 20px">
+            <input required="" type='text' name="time">
+            <label alt='time' placeholder='time'></label>
+          </div>
+        </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary id="innerDetails">Helper</summary>
+        <ul>
+        <!-- 	Checkbox 4	 -->
+        <li>
+          <label class="toggle" for="ambientlight">
+            <input type="checkbox" class="toggle__input" name="light" value="lightOn" id="ambientlight" checked="true"/>
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            Ambientlight
+          </label>
+        </li>
+
+        <!-- 	Checkbox 5	 -->
+        <li>
+          <label class="toggle" for="grid">
+            <input type="checkbox" class="toggle__input" name="grid" value="gridOn" id="grid" />
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            Grid
+          </label>
+        </li>
+
+        <!-- 	Checkbox 6	 -->
+        <li>
+          <label class="toggle" for="finder">
+            <input type="checkbox" class="toggle__input" name="finder" value="backgroundOn" id="finder" />
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            find planets
+          </label>
+        </li>
+
+        <!-- 	Checkbox 7	 -->
+        <li>
+          <label class="toggle" for="helper">
+            <input type="checkbox" class="toggle__input" name="helper" value="backgroundOn" id="helper" />
+            <span class="toggle-track">
+              <span class="toggle-indicator">
+                <!-- 	This check mark is optional	 -->
+                <span class="checkMark">
+                  <svg viewBox="0 0 24 24" id="ghq-svg-check" role="presentation" aria-hidden="true">
+                    <path d="M9.86 18a1 1 0 01-.73-.32l-4.86-5.17a1.001 1.001 0 011.46-1.37l4.12 4.39 8.41-9.2a1 1 0 111.48 1.34l-9.14 10a1 1 0 01-.73.33h-.01z"></path>
+                  </svg>
+                </span>
+              </span>
+            </span>
+            Helper
+          </label>
+        </li>
+      </ul>
+      </details>
+
+      <!-- 	Button	 -->
+      <div style=" width: parent; height: 100px; padding: 5%; position: relative; left: 15%;">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="buttonBubble">
+          <defs>
+              <filter id="gooey">
+                  <!-- in="sourceGraphic" -->
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                  <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                  <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+              </filter>
+          </defs>
+      </svg>
+  
+      <button id="gooey-button">
+          reload system
+          <span class="bubbles">
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+              <span class="bubble"></span>
+          </span>
+      </button>
+    </div>
+  </div>
+    </details>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
